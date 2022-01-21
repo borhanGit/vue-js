@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js part-6</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"> </script>
+</head>
+<body>
+    <div id="app">
+       <h2>My name is: {{ name }}</h2><br>
+       <input type="text" v-model="name"><br>
+       <input type="checkbox" v-model="status">
+       <h2>Status is:{{ status }}</h2>
+       <hr>
+       <input type="checkbox" v-model="names" value="borhan">Borhan
+       <input type="checkbox" v-model="names" value="johir">Johir
+       <input type="checkbox" v-model="names" value="ashik">Ashik
+       <p>A list of name: {{ names.join(',') }}</p>
+       <br>
+       <input type="radio" v-model="felling" value="nice">Nice
+       <input type="radio" v-model="felling" value="great">Great
+       <input type="radio" v-model="felling" value="good">Good
+       <p>The Felling is: {{ felling }}</p>
+
+      </div>
+      <script>
+          var app = new Vue({
+             el: '#app',
+             data: {
+                   message: 'Hello !',
+                   name: '',
+                   status:'',
+                   names: [],
+                   felling: '',
+                 }
+        })
+      </script>
+    
+</body>
+</html>

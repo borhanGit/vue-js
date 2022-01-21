@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js part-5</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"> </script>
+</head>
+<body>
+    <style>
+        .active{
+            color: white;
+        }
+        .error{
+            background-color: red;
+        }
+    </style>
+    <div id="app">
+        {{ message }}<br>
+        <a :href="url" target="_blank">Click me</a>
+        <a href="" target="_blank">Click me</a>
+        <a href="" target="_blank">Click me</a>
+        <div :class="{active:is_active,'error':hasError}">Title</div>
+      </div>
+      <script>
+          var app = new Vue({
+             el: '#app',
+             data: {
+                   message: 'Hello !',
+                   url: 'https://www.google.com/',
+                   is_active: true,
+                   hasError:true,
+                 }
+        })
+      </script>
+    
+</body>
+</html>
